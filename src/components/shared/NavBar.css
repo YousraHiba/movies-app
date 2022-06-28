@@ -1,0 +1,10 @@
+.nav-bar {
+  background-color: #191c1f;
+}
+.titles {
+  color: white;
+}
+.nav-bar-element-active {
+  background-color: #222b31;
+  font: bold;
+}
