@@ -1,0 +1,14 @@
+.container {
+  color: #ffffff;
+}
+
+.login-button {
+  background: #e50914;
+  width: 100px;
+  color: #ffffff;
+}
+.form-container {
+  width: 500px;
+  margin-top: 150px;
+  padding-bottom: 100px;
+}
