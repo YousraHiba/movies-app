@@ -9,7 +9,7 @@ function HeaderBar() {
         <div className="col-2 ">
           <h6 style={{ color: "#ffffff" }}>MEDIA APP</h6>
         </div>
-        <div className="col-7">
+        <div className="col-6">
           {" "}
           <input
             className="form-control"
@@ -18,12 +18,21 @@ function HeaderBar() {
             aria-label="Search"
           />{" "}
         </div>
-        <div className="col-2 ">
-          <i
-            className="fa-regular fa-user fa-lg "
+        <div className="col-4 ">
+          <div
+            className="text-decoration-underline"
             style={{ color: "#ffffff" }}
             onClick={() => navigate("/user")}
-          ></i>
+          >
+            Sign In{" "}
+          </div>
+          <div
+            className="text-decoration-underline"
+            style={{ color: "#ffffff" }}
+            onClick={() => navigate("/registration")}
+          >
+            Registration{" "}
+          </div>
         </div>
       </nav>
     </div>
