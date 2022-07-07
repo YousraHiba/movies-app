@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "../shared/Component.css";
+
 import axios from "axios";
 
-function TrendingMovies() {
+function PopularShow() {
   const [movies, setMovies] = useState([]);
+
   const basePosterPath = "https://image.tmdb.org/t/p/original";
 
   const url =
-    " https://api.themoviedb.org/3/movie/popular?api_key=7ecfa22ca8129111ace52f17f65b1c17&language=en-US&page=1";
+    " https://api.themoviedb.org/3/tv/top_rated?api_key=7ecfa22ca8129111ace52f17f65b1c17&language=en-US&page=1";
   useEffect(() => {
     axios.get(url).then((res) => {
+      // setMovies(res.data.results[0]);
       console.log("movies are", movies);
 
       setMovies(res.data.results);
@@ -17,7 +20,7 @@ function TrendingMovies() {
   }, []);
   return (
     <div className="row">
-      <h3 className="title "> New Relases Movies</h3>
+      <h3 className="title "> Popular Tv Shows</h3>
 
       {movies.map((movie) => (
         <div
@@ -49,4 +52,4 @@ function TrendingMovies() {
     </div>
   );
 }
-export default TrendingMovies;
+export default PopularShow;

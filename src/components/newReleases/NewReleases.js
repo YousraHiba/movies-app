@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./NewReleases.css";
+import "../shared/Component.css";
 
 import axios from "axios";
 
 function NewReleases() {
   const [movies, setMovies] = useState([]);
-  const [movieTest, setMovieTest] = useState([]);
+
   const basePosterPath = "https://image.tmdb.org/t/p/original";
 
   const url =
@@ -24,7 +24,7 @@ function NewReleases() {
 
       {movies.map((movie) => (
         <div
-          className="card col-2 "
+          className="card col-2 container "
           style={{ width: "12rem", backgroundColor: "#222b31" }}
           key={movie.id}
         >
@@ -37,10 +37,13 @@ function NewReleases() {
             {movie.vote_average}
           </div>
           <img
-            className="card-img-top poster"
-            src={"https://image.tmdb.org/t/p/original" + movie.poster_path}
+            className="card-img-top poster image"
+            src={basePosterPath + movie.poster_path}
             alt="Poster"
-          />
+          />{" "}
+          <div className="overlay ">
+            <div className="overview m-2">{movie.overview}</div>
+          </div>
           <div className="card-body">
             <p className="card-title title"> {movie.original_title}</p>
           </div>

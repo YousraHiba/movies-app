@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import "../shared/Component.css";
 import axios from "axios";
 
-function TrendingMovies() {
+function CommingSoon() {
   const [movies, setMovies] = useState([]);
+
   const basePosterPath = "https://image.tmdb.org/t/p/original";
 
   const url =
-    " https://api.themoviedb.org/3/movie/popular?api_key=7ecfa22ca8129111ace52f17f65b1c17&language=en-US&page=1";
+    " https://api.themoviedb.org/3/movie/upcoming?api_key=7ecfa22ca8129111ace52f17f65b1c17&language=en-US&page=1";
   useEffect(() => {
     axios.get(url).then((res) => {
+      // setMovies(res.data.results[0]);
       console.log("movies are", movies);
 
       setMovies(res.data.results);
@@ -49,4 +51,5 @@ function TrendingMovies() {
     </div>
   );
 }
-export default TrendingMovies;
+
+export default CommingSoon;
