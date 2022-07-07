@@ -4,8 +4,8 @@ function RegistrationUser() {
   return (
     <div className="container form-container ">
       <h2 className="title"> Registration</h2>
-      <div class=" m-4">
-        <label class="form-label">Email or username</label>
+      <div className=" m-4">
+        <label className="form-label">Email or username</label>
         <input
           type="email"
           className="form-control"
@@ -13,7 +13,7 @@ function RegistrationUser() {
         />
       </div>
       <div className=" m-4">
-        <label class="form-label">Password</label>
+        <label className="form-label">Password</label>
         <input
           type="password"
           className="form-control"
@@ -21,14 +21,19 @@ function RegistrationUser() {
         />
       </div>
       <div className=" m-4">
-        <label class="form-label">Confirm your password</label>
+        <label className="form-label">Confirm your password</label>
         <input
           type="password"
           className="form-control"
           placeholder="**********"
         />
       </div>
-      <button className="btn login-button">Sign In</button>
+      <div className="text-decoration-underline link-text m-3 ">
+        <a href="/user" className="link-danger">
+          You Already have an account ? Sign In.
+        </a>
+      </div>
+      <button className="btn login-button">Registration</button>
     </div>
   );
 }

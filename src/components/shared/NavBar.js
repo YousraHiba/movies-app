@@ -17,6 +17,13 @@ function NavBar(props) {
     // props.onSubmit(trendingMovies);
     // console.log("NewReleasesStatu 2  ===>", NewReleasesStatu);
   };
+  const CommingSoon = () => {
+    setStatu(false);
+    props.onSubmit(statu);
+
+    // props.onSubmit(trendingMovies);
+    // console.log("NewReleasesStatu 2  ===>", NewReleasesStatu);
+  };
   return (
     <div className=" nav-bar  ">
       <div
@@ -34,8 +41,10 @@ function NavBar(props) {
         {" "}
         Trending
       </div>
-      <div className="titles p-2"> Coming Soon</div>
-      <div className="titles p-2">favorites</div>
+      <div className="titles p-2" onClick={CommingSoon}>
+        {" "}
+        Coming Soon
+      </div>
     </div>
   );
 }
