@@ -16,7 +16,7 @@ function LatestTvShow() {
 
       setMovies(res.data.results);
     });
-  }, []);
+  });
   return (
     <div className="row">
       <h3 className="title "> Latest Tv Shows</h3>

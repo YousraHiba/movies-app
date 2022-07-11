@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./HeaderBar.css";
 
 function HeaderBar() {
   const navigate = useNavigate();
+  const [query, setQuery] = useState("");
 
   return (
     <div>
@@ -24,7 +25,8 @@ function HeaderBar() {
             type="text"
             placeholder="Search"
             aria-label="Search"
-          />{" "}
+            onChange={(event) => setQuery(event.target.value)}
+          />
         </div>
         <div
           className="text-decoration-underline link-title col-2"

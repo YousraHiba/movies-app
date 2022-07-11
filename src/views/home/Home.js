@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import NewReleases from "../../components/newReleases/NewReleases";
 import TrendingMovies from "../../components/trending/TrendingMovies";
 import CommingSoon from "../../components/commingSoon/CommingSoon";
@@ -46,6 +46,7 @@ function Home() {
     setLatestTv(false);
     setPopularTv(true);
   };
+
   return (
     <div className="App ">
       <div className="row">

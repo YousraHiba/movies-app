@@ -14,10 +14,9 @@ function PopularShow() {
     axios.get(url).then((res) => {
       // setMovies(res.data.results[0]);
       console.log("movies are", movies);
-
       setMovies(res.data.results);
     });
-  }, []);
+  });
   return (
     <div className="row">
       <h3 className="title "> Popular Tv Shows</h3>

@@ -17,7 +17,7 @@ function NewReleases() {
 
       setMovies(res.data.results);
     });
-  }, []);
+  });
   return (
     <div className="row">
       <h3 className="title "> New Relases Movies</h3>
